@@ -1,2 +1,5 @@
 Flask
 Flask-SocketIO
+SQLAlchemy
+Hashlib
+psycopg2
