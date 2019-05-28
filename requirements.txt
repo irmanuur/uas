@@ -23,7 +23,6 @@ postgres
 psycopg2-binary
 pylint
 python-engineio
-python-socket.io
 requests
 setuptools
 six
