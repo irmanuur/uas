@@ -1,0 +1,19 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">NIS</th>
+      <th scope="col">NAMA SISWA</th>
+      <th scope="col">NILAI</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for nilai in nili%}
+    <tr>
+      <td scope="col">{{ nilai.nis }}</td>
+      <td scope="col">{{ nilai.nama }}</td>
+      <td scope="col">{{ nilai.nilai }}</td>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>

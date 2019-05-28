@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block head %}
+        <title>Kuis</title>
+        
+{% endblock %}
+
+{% block body %} 
+<hr/>
+<div>
+<button class="btn btn-default btn-dark" disabled >Soal 1</input>
+<button class="btn btn-default btn-dark" disabled >Soal 2</input>
+<button class="btn btn-default btn-dark" disabled >Soal 3</input>
+<button class="btn btn-default btn-dark" disabled >Soal 4</input>
+<button class="btn btn-default btn-dark"  >Soal 5</input>
+</div>
+<hr/>
+    <div class="container">
+
+    <div>
+{{ soal1.id }}. {{ soal1.soal }}
+    </div>
+      <br>
+      <div>
+      <form action="{{ url_for('insert5') }}" method="POST">
+        
+        <input type="hidden" name="ids" value="{{ soal1.id }}"></input> 
+        
+        {% for jwb1s in jwb1 %}
+        <div class="radio">
+        <input type="radio" name="idj" value="{{ jwb1s.id }}" checked>{{ jwb1s.opsi }}. {{ jwb1s.jwb }}<br/>
+        </div>
+        {% endfor %}
+        <button id="klik" class="btn btn-primary">Simpan</button>
+        
+      </form>  
+      </div>
+      </div>  
+{% endblock %}

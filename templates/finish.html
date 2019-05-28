@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block head %}
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+<script src="{{ url_for('static',filename='kuis.js') }}"></script>
+{% endblock%}
+
+{% block body %}
+<br/>
+      <hr/>
+      Silahkan klik Selesai, aplikasi akan logout otomatis.
+      <br>
+      <form action="{{ url_for("logout") }}" methods="post">
+        <button class="btn btn-medium" data-vote="B" name="B" value="B">Selesai</button>
+      </form>
+{% endblock %}

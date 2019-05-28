@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block head %}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+    <script src="{{ url_for('static',filename='kuis.js') }}"></script>
+    <script >
+        
+    </script>
+{% endblock%}
+
+{% block body %}
+
+
+<br/>
+      <hr/>
+      Soal tidak dapat diulang.Jika Anda telah siap mengikuti kuis silahkan tekan tombol di bawah ini:
+      <br>
+      <form action="{{ url_for("first") }}" methods="post">
+        <button type="submit" class="btn btn-default" data-vote="A" >Mulai</button>
+      </form>
+
+      
+{% endblock %}
